@@ -11,6 +11,20 @@ const Carousel = ({imgArr}) => {
   }
   return (
     <div className="carousel">
+        <div className="leftArrow" onClick={() => {
+
+            const isFirstFrame = imageOnScreen === 0;
+            const newImageOnScreen = isFirstFrame ? imgArr.length - 1 : imageOnScreen - 1;
+            setImageOnScreen(newImageOnScreen)
+
+        }}>❰</div>
+
+        <div className="rightArrow" onClick={()=> {
+            const isLastFrame = imageOnScreen === imgArr.length - 1;
+            const newImageOnScreen = isLastFrame ? 0 : imageOnScreen + 1;
+            setImageOnScreen(newImageOnScreen);  
+
+        }}>❱</div>
         <div style={carouselFrame}/>
     </div>
   )

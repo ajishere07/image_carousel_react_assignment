@@ -2,3 +2,25 @@
     height: 100%;
     position: relative;
 }
+
+.leftArrow{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 30px;
+    font-size: 32px;
+    color: white;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.rightArrow{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right:30px;
+    font-size: 32px;
+    color: white;
+    z-index: 1;
+    cursor: pointer;
+}
